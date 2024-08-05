@@ -1,9 +1,6 @@
 (ns clojure-kafka.core
   (:require [clj-kafka.producer :as producer]
-            [clj-kafka.consumer.simple :as consumer]
-            [clj-kafka.core :as core]))
-
-(core/to-clojure)
+            [clj-kafka.consumer.simple :as consumer]))
 
 (def producer-config
   {"metadata.broker.list" "localhost:9094"
