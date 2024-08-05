@@ -21,8 +21,7 @@
   (let [offset (- (consumer/topic-offset consumer topic partition :latest) 1)]
     (let [messages (consumer/messages consumer "example-client" topic partition offset 1000)]
         (doseq [message messages]
-          (println "Received message:" (String. (.value message)) " Offset: " (.offset message))
-          (.offset message)))))
+          (println "Received message:" (String. (.value message)) " Offset: " (.offset message))))))
 
 (defn loop [callback]
   (while true
